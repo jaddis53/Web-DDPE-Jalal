@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Multimedia DOM</title>
+
+<script>
+
+	function swap() 
+	{
+		let image = document.getElementById('image');
+		let vid = document.createElement('video');
+		vid = document.getElementById('vid');
+		image.parentNode.replaceChild(vid, image);
+
+		let imageElement = document.createElement('img');
+		imageElement.src='images/life1.jpg';
+		imageElement.width='700';
+		var position=document.getElementById('btn');
+		var insert =document.getElementById('my');
+        insert.insertBefore(imageElement, position);
+
+	}
+
+	function removeAudio() 
+	{
+		var audioElement=document.getElementById('audioRemove');
+        var containerElement=document.getElementById('container');
+        containerElement.removeChild(audioElement);
+	}
+
+	function addLogo()
+	{
+		var logo = document.createElement('img');
+		logo.src = 'images/logo_gold.png';
+		logo.height = '100';
+		var pos = document.getElementById('logo')
+		pos.appendChild(logo);	
+	}
+
+</script>
+
+</head>
+
+<body>
+
+<table width="100%">
+   <tr>
+      <td width="10%"></td>
+	  <td id = "logo">
+		  <button onclick="addLogo()">Add Logo</button>
+		  <!--<img src="../resources/images/logo_gold.png" alt="logo" width ="60" height="100">-->
+		</td>
+      <td align="right">
+		  <a href="index.html">Podcasts </a>
+		  <a href="index.html"> | Article | </a>
+		  <a href="index.html"> About us | </a>
+		  <a href="index.html"> Contact us</a>
+		</td>
+      <td width="10%"></td>
+   </tr>
+
+</table>
+<hr>
+
+<table width="100%">
+
+   <tr> 
+      <td colspan="4" align="right"> <a href="index.html"> Go to bottom </a></td>
+   </tr>
+
+   <tr>
+      <td  width="10%"></td>
+      <td width=60%>
+	<h1>Eric Hoffer and the Power of Self-Education</h1>
+	<img id="image" src="../resources/images/life1.jpg" width="95%">
+	<button onclick = "swap()">Click here to swap the video and the image</button>
+
+	<p>I recently read The True Believer by Eric Hoffer. It's a book about how mass movements evolve. With a lot
+of historical examples, the book explains the patterns and common threads among them. It's an insightful
+book and reading it was a great learning experience for me.
+	<br>
+	<img src="book cover.jpg" alt="The Time Believer book cover" align="left">
+	What I'd like to share with you here is not the content of the book, though. Instead, I'd
+       like to share with you about the author.</p>
+	
+	<p>
+You see, I didn't know about Eric Hoffer before. But I imagined he must be a famous
+professor from a well-known university. I mean, what else could explain the depth of his
+insights? The True Believer is an influential book. Here is how <a href="index.html"> Wikipedia</a> put it... <a href="index.html"> read more</a>
+	</p>
+
+</td>
+
+      <td width="20%">
+	<h2>Recent Posts</h2>
+	<ul>
+	   <li><h4>Articles</h4></li>
+		<ul>
+		   <li>The Importance of Goals, Especially During Difficult Times</li>
+		   <li>5 Steps to Discovering Your Life Purpose In 2022!</li>
+		</ul>
+	   <li><h4>Ideas</h4></li>
+		<ul>
+		   <li>10 Books to Read in The Fall</li>
+		   <li>Top Web Development Projects Ideas</li>
+		
+		</ul>
+	</ul>
+	<h3> Most Viewed Articles</h3>
+	<ol type="I">
+	   <li>Instant Gratification Is Stopping You From Reaching Your Goals!</li>
+	   <li> Stop Juggling Between Work And Life</li>
+		</ol>
+		<h3>Ip project leaders</h3>
+		<pre>
+	---------------------------------
+	Rank    Award 
+	---------------------------------
+	First   Free hosting and support 
+	Second  5GB Mobile Data 
+	Third   1GB Mobile Data 
+	---------------------------------- 
+		</pre>
+	  </td>
+	  <td width="10%"></td>
+   </tr>
+   <tr>
+	   <td width="10%"></td>
+	   <td width="60%"><hr></td>
+   </tr>
+   <tr>
+	   <td width="10%"></td>
+	   <td width="60%" id = "container">
+		   <h3>New Podcast</h3>
+		   <h2>Jack Ma - How I Overcame Failure</h2>
+		   <audio controls id="audioRemove">
+			   <source src="../resources/audio/Jack Ma - How I Overcame Failure.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+		   </audio>
+		   <br>
+		   <button onclick="removeAudio()">Remove Audio</button>
+	   </td>
+   </tr>
+   <tr>
+		<td width="10%"></td>
+		<td width="60%"><hr></td>
+	</tr>
+	<tr>
+		<td width="10%"></td>
+		<td width="60%" id = "my">
+			<h3>Pick of The Weak</h3>
+			<h2>24 Hours A Day</h2>
+			<video id="vid" width="95%" controls>
+				<source src="../resources/video/24_HOURS.mp4" type="video/mp4">
+			</video>
+			<p id="btn"></p>
+		</td>
+		<td width="20%"></td>
+		<td width="10%"></td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+	<tr>
+		<td width="10%"></td>
+		<td colspan="2"><hr></td>
+		<td width="10%"></td>
+	</tr>
+	<tr>
+		<td width="10%"></td>
+		<td width="60%">Follow us On:<a href="#">Facebook | </a>
+			<a href="#"> Twitter</a> </td>
+		<td width="20%" align="right"><a href="#">Privacy | </a>
+			<a href="#"> Terms of Use</a></td>
+	</tr>
+	<tr>
+		<td><br></td>
+	</tr>
+	<tr>
+		<td width="10%"></td>
+		<td width="10%" align="center">Copyright © AASTU SEng 2021, All Rights Reserved</td>
+
+	</tr>
+</table>
+
+</body>
+</html>
