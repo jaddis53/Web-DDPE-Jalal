@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Life Hacks Index</title>
+<meta name="keyword" content="Life, Hacks, Motivation">
+<script>
+function msg1(){  
+ alert("Done");  
+}
+function msg2(){  
+ alert("Cleared");  
+}
+function focusevent(){
+ document.getElementById("username1").style.background="aqua";
+}
+function blurevent(){
+ if(document.getElementById("password1").length < 6){
+  document.getElementById("password1").style.background="red";
+ }
+}
+function inputevent(){
+ document.getElementById("phone").style.background="yellow";
+}
+function invalidevent(){  
+ alert("Invalid input detected");  
+}
+
+//let people = [];
+const person = {}
+
+person.addObject=function (ev){
+		ev.preventDefault();
+		person.name= document.getElementById("username1").value;
+		person.phone= document.getElementById("phone").value;
+		person.age= document.getElementById("age").value;
+		person.color= document.getElementById("color").value;
+		person.print= function(ev){
+					ev.preventDefault();
+					document.getElementById("text").innerHTML = "Name: " + this.name + "\nPhone: " + this.phone + "\nAge: " + this.age + "\nColor: " + this.color;
+				}
+	
+}
+
+</script>
+</head>
+<body>
+<table width="100%" height="100%">
+<tr>
+<td width="10%">
+</td>
+<td>
+	<img src="resources\images/logo_gold.png" alt="logo"  width="50px">
+</td>
+<td align="right">
+<a href="original.html#podcast">Podcast</a> <span>|</span> 
+<a href="original.html">Article</a> <span>|</span> 
+<a href="source">Ideas</a> <span>|</span>
+<a href="signin.html">Sign In</a> <span>|</span>
+<a href="#">Register</a>
+</td>
+<td width="10%">
+</td>
+</tr>
+</table>
+<hr/>
+<table>
+<tr>
+<td colspan="2" width="10%"></td>
+<td align="right">
+<a href="Source">Go to bottom</a>
+</td>
+<td width="10%">
+</td>
+</tr>
+<tr>
+<td width="10%">
+</td>
+<td width = "50%">
+<h1>Form</h1>
+<h2> Register </h2>
+
+<form>
+<p>
+Full Name:<br/>
+<input type = "text" id = "username1" size = "50%" maxlength = "50" onfocus="focusevent()"/>
+<br/>
+Phone:<br/> 
+<input type = "text" id= "phone" size = "50%" maxlength = "30" oninput="inputevent()"/>
+<br/>
+Age:<br/>
+<input type = "number" id = "age" max= "80" min = "18" oninvalid="invalidevent()"/>
+<br/>
+Your Favorite Color:
+<input type = "color" id = "color"/>
+<br/>
+<button id="addobj" value="Add" onclick="person.addObject(event)">Add</button><br/>
+Birthdate:<br/>
+<input type = "date" name = "birhtdate"/>
+<br/>
+Gender:<br/>
+<input type = "radio" name = "gender" value = "female" />Female
+<input type = "radio" name = "gender" value = "male"  />Male
+<br/>
+Password:<br/> 
+<input type = "password" id ="password1" size = "50%" maxlength = "32" minlength = "6" oninvalid="invalidevent()" onblur="blurevent()"/>
+<br/>
+Confirm password:<br/> 
+<input type = "password" id="password2" size = "50%" maxlength = "32" minlength = "6" oninvalid="invalidevent()"/>
+<br/>
+Skills:<br/>
+<ul>
+<li><input type = "checkbox" name = "html" value = "html" />HTML</li>
+<li><input type = "checkbox" name = "css" value = "css"  />CSS</li>
+<li><input type = "checkbox" name = "javascript" value = "javascript" />JAVASCRIPT</li>
+<li><input type = "checkbox" name = "php" value = "php" />PHP</li>
+</ul>
+<br/>
+Country:<br/>
+<select name = "country">
+<option value = "ethiopia">Ethiopia</option>
+<option value = "kuwait">Kuwait</option>
+<option value = "congo">Congo</option>
+</select>
+<br/>
+Photo:<br/>
+<input type = "file" name = "file" size = "20"/>
+<br/>
+Describe Yourself:<br/>
+<textarea name: "comment" cols = "50" rows = "10"> </textarea>
+<br/>
+<input type = "submit" value = "Submit"/>
+<input type = "reset" value = "Reset"/>
+</p>
+</form>
+
+</td>
+<td width = "30%" valign="top">
+<br/ >
+<b><big>Recent Posts</big></b>
+<ul>
+<li><b>Articles</b></li>
+<ul>
+<li>The Importance of Goals, Especially During Difficult Times</li>
+<li>5 Steps to Discovering Your Life Purpose In 2022!</li>
+</ul>
+<li><b>Ideas</b></li>
+<ul>
+<li>10 Books to Read in The Fall</li>
+<li>Top Web Development Projects Ideas</li>
+</ul>
+</ul>
+<b><big>Most Viewed Articls</big></b>
+<ol type="I">
+<li> Instant Gratification Is Stopping You From Reaching Your Goals! li></li>
+<li> Stop Juggling Between Work And Life</li>
+</ol>
+<b><big>IP Project Winners<big></b>
+<pre>
+---------------------------------
+Rank    Award 
+---------------------------------
+First   Free hosting and support 
+Second  5GB Mobile Data 
+Third   1GB Mobile Data 
+----------------------------------
+</pre>
+<form>
+<button value="display" onclick="person.print(event)">Display</button>
+<textarea id="text" cols="40" rows="10"></textarea>
+</form>
+</td>
+<td width="10%">
+</td>
+</tr>
+<tr>
+<td width="10%">
+</td>
+<td colspan ="2">
+<hr/>
+</td>
+<td width="10%">
+</td>
+</tr>
+<tr>
+<td width="10%">
+</td>
+<td>
+Follow Us On: 
+<a href="Source">Facebook</a><span>|</span><a href="Source">Twitter</a>
+</td>
+<td align="right">
+<a href="Source">Privacy</a><span>|</span>
+<a href="Source">Terms of Use</a>
+</td>
+<td width="10%">
+</td>
+</tr>
+<tr>
+<td width="10%">
+</td>
+<td colspan="2" align="center">
+<footer>Copyright &copy AASTU SEng 2021, All Rights Reserved </footer>
+</td>
+<td width="10%">
+</td>
+</tr>
+</table>
+</body>
+</html>
